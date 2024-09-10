@@ -7,16 +7,24 @@ public class App
 {
     public static void main( String[] args )
     {
-       System.out.println("Hello world!");
-       boolean isOnline = false;
-       int age = 17;
-       Scanner scanner = new Scanner(System.in);
-       System.out.println("Ievadi savu vārdu: ");
-       String name = scanner.nextLine();
-       System.out.println("Ievadiet savu uzvārdu: ");
-       String lastname = scanner.nextLine();
-       System.out.println("Ievadiet savu grupu: ");
-       String group = scanner.nextLine();
-       System.out.println("Students: " + name + " " + lastname + ", Grupa: " + group);
+        Scanner scanner = new Scanner(System.in);
+        // saņēmām ievadi kā string vērtību
+        //String input = scanner.nextLine();
+        // veidojam int datu tipa mainīgo, un konvertējam to
+        //int inputAsInt = Integer.valueOf(input);
+
+        //System.out.println(inputAsInt * 10);
+        // Izveidot programmu kura prasa ievadīt divus ciparus
+        // un izvadē gribam redzēt to ciparu reizinājumu
+        //System.out.println("Ievadi pirmo skaitli: ");
+        //String input1 = scanner.nextLine();
+        //System.out.println("Ievadi otro skaitli: ");
+        //String input2 = scanner.nextLine();
+        //int skaitlis1 = Integer.valueOf(input1);
+        //int skaitlis2 = Integer.valueOf(input2);
+        //System.out.println(skaitlis1 * skaitlis2);
+        int skaitlis = Integer.valueOf(scanner.nextLine());
+        
+
     }
 }
