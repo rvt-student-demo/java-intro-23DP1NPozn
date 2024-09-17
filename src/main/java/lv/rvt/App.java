@@ -8,11 +8,22 @@ public class App
     public static void main( String[] args )
     {
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Give speed: ");
-        int atrums = Integer.valueOf(scanner.nextLine());
-        int limits = 120;
-        if (atrums > limits) {
-            System.out.println("Speeding ticket!");
+        //int number = Integer.valueOf(scanner.nextLine());
+        //if (number > 5) {
+            //System.out.println("Your number is greater than five.");
+        //}  else {
+            //System.out.println("Your number is five or less.");
+        //}
+        System.out.println("Give the first number: ");
+        int number1 = Integer.valueOf(scanner.nextLine());
+        System.out.println("Give the second number: ");
+        int number2 = Integer.valueOf(scanner.nextLine());
+        if (number1 > number2) {
+            System.out.println("Greater number is: " + number1);
+        } else if (number2 > number1) {
+            System.out.println("Greater number is: " + number2);
+        } else {
+            System.out.println("The numbers are equal!");
         }
-    }
-}
+        }
+        }
