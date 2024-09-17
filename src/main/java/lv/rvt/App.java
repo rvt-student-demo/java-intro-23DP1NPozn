@@ -14,16 +14,23 @@ public class App
         //}  else {
             //System.out.println("Your number is five or less.");
         //}
-        System.out.println("Give the first number: ");
-        int number1 = Integer.valueOf(scanner.nextLine());
-        System.out.println("Give the second number: ");
-        int number2 = Integer.valueOf(scanner.nextLine());
-        if (number1 > number2) {
-            System.out.println("Greater number is: " + number1);
-        } else if (number2 > number1) {
-            System.out.println("Greater number is: " + number2);
-        } else {
-            System.out.println("The numbers are equal!");
+        int points = Integer.valueOf(scanner.nextLine());
+        if (points < 0) {
+            System.out.println("impossible!");
+        } else if (points > 0 && points < 50 ) {
+            System.out.println("failed");
+        } else if (points > 49 && points < 59 ) {
+            System.out.println("1");
+        } else if (points > 59 && points < 70 ) {
+            System.out.println("2");
+        } else if (points > 69 && points < 80 ) {
+            System.out.println("3");
+        } else if (points > 79 && points < 90 ) {
+            System.out.println("4");
+        } else if (points > 89 && points <= 100) {
+            System.out.println("5");
+        } else if (points > 100) {
+            System.out.println("incredible!");
         }
         }
         }
