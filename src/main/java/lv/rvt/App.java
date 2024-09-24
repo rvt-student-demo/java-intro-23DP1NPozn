@@ -15,6 +15,7 @@ public class App
             //System.out.println("Your number is five or less.");
         //}
     int skait=0;
+    int sum=0;
     while (true) {
         System.out.println("Give a number: ");
         int number = Integer.valueOf(scanner.nextLine());
@@ -22,7 +23,9 @@ public class App
             break;
         }
         skait+=1;
+        sum+=number;
     }
     System.out.println("Number of numbers: "+ skait);
+    System.out.println("Sum of numbers: "+ sum);
     }
     }
