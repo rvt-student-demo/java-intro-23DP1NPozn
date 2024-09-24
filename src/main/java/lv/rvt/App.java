@@ -14,6 +14,7 @@ public class App
         //}  else {
             //System.out.println("Your number is five or less.");
         //}
+        System.out.println("Give points [0-100]:");
         int points = Integer.valueOf(scanner.nextLine());
         if (points < 0) {
             System.out.println("impossible!");
@@ -24,7 +25,7 @@ public class App
         } else if (points > 59 && points < 70 ) {
             System.out.println("2");
         } else if (points > 69 && points < 80 ) {
-            System.out.println("3");
+            System.out.println("Grade: 3");
         } else if (points > 79 && points < 90 ) {
             System.out.println("4");
         } else if (points > 89 && points <= 100) {
