@@ -14,10 +14,12 @@ public class App
         //}  else {
             //System.out.println("Your number is five or less.");
         //}
-    int start = Integer.valueOf(scanner.nextLine());
-    int end = Integer.valueOf(scanner.nextLine());
-    for (int i = start; i < end; i++) {
-        System.out.println(i);
+    System.out.println("Last number?");
+    int n = Integer.valueOf(scanner.nextLine());
+    int sum = 0;
+    for (int i = 1; i < n+1; i++) {
+        sum+=i;
     }
+    System.out.println("The sum is: "+ sum);
     }
     }
