@@ -7,19 +7,34 @@ public class App
 {
     public static void main( String[] args )
     {
-        Scanner scanner = new Scanner(System.in);
-        //int number = Integer.valueOf(scanner.nextLine());
-        //if (number > 5) {
-            //System.out.println("Your number is greater than five.");
-        //}  else {
-            //System.out.println("Your number is five or less.");
-        //}
-    System.out.println("Last number?");
-    int n = Integer.valueOf(scanner.nextLine());
-    int sum = 0;
-    for (int i = 1; i < n+1; i++) {
-        sum+=i;
-    }
-    System.out.println("The sum is: "+ sum);
+        Scanner reader = new Scanner(System.in);
+        int sum = 0;
+        int numbers =0;
+        int even = 0;
+        System.out.println("Give numbers:");
+        int odd = 0;
+        while (true) {
+            int input = Integer.valueOf(reader.nextLine());
+        
+            if (input == -1) {
+                System.out.println("Thx! Bye!");
+                System.out.println("Sum: " + sum);
+                System.out.println("Numbers: " + numbers);
+                double avg = (double)sum/numbers;
+                System.out.println("Average: "+ avg);
+                System.out.println("Even: "+even);
+                System.out.println("Odd: "+odd);
+                break;
+            }
+            sum += input;
+            numbers++;
+            if (input % 2 ==0) {
+                even++;
+            }
+            else {
+                odd++;
+            }
+
+        }
     }
     }
