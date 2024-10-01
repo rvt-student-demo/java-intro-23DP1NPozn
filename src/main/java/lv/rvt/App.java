@@ -5,36 +5,15 @@ import java.io.BufferedWriter;
 
 public class App 
 {
-    public static void main( String[] args )
-    {
-        Scanner reader = new Scanner(System.in);
-        int sum = 0;
-        int numbers =0;
-        int even = 0;
-        System.out.println("Give numbers:");
-        int odd = 0;
-        while (true) {
-            int input = Integer.valueOf(reader.nextLine());
-        
-            if (input == -1) {
-                System.out.println("Thx! Bye!");
-                System.out.println("Sum: " + sum);
-                System.out.println("Numbers: " + numbers);
-                double avg = (double)sum/numbers;
-                System.out.println("Average: "+ avg);
-                System.out.println("Even: "+even);
-                System.out.println("Odd: "+odd);
-                break;
-            }
-            sum += input;
-            numbers++;
-            if (input % 2 ==0) {
-                even++;
-            }
-            else {
-                odd++;
-            }
+    public static void main( String[] args ){
+            divisibleByThreeInRange(2, 10);
+        }
 
+    public static void divisibleByThreeInRange(int x, int y) {
+        for (int i = x; i<y+1; i++) {
+            if (i%3==0) {
+                System.out.println(i);
+            }
         }
     }
-    }
+}
