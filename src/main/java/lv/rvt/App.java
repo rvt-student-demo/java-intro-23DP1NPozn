@@ -5,15 +5,15 @@ import java.io.BufferedWriter;
 
 public class App 
 {
-    public static void main( String[] args ){
-            divisibleByThreeInRange(2, 10);
+        public static void main(String[] args) {
+        printStars(5);
+        printStars(3);
+        printStars(9);
+}
+    public static void printStars(int number) {
+        for (int n=0; n < number; n++) {
+            System.out.print("*");
         }
-
-    public static void divisibleByThreeInRange(int x, int y) {
-        for (int i = x; i<y+1; i++) {
-            if (i%3==0) {
-                System.out.println(i);
-            }
-        }
+        System.out.println();
     }
 }
