@@ -6,11 +6,11 @@ import java.io.BufferedWriter;
 public class App 
 {
         public static void main(String[] args) {
-        printRectangle(17, 3);
+        printTriangle(4);
 }
-    public static void printRectangle(int length, int width) {
-        for (int x=0; x < width; x++){
-            for (int n=0; n < length; n++) {
+    public static void printTriangle(int size) {
+        for (int x=0; x < size; x++){
+            for (int n=0; n <= x; n++) {
                 System.out.print("*");
             }
             System.out.println();
