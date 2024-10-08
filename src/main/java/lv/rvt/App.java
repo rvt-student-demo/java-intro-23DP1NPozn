@@ -6,14 +6,14 @@ import java.io.BufferedWriter;
 public class App 
 {
         public static void main(String[] args) {
-        printStars(5);
-        printStars(3);
-        printStars(9);
+        printSquare(4);
 }
-    public static void printStars(int number) {
-        for (int n=0; n < number; n++) {
-            System.out.print("*");
+    public static void printSquare(int number) {
+        for (int x=0; x < number; x++){
+            for (int n=0; n < number; n++) {
+                System.out.print("*");
+            }
+            System.out.println();
         }
-        System.out.println();
     }
 }
