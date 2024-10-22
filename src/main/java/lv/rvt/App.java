@@ -3,36 +3,33 @@ import java.util.*;
 public class App 
 {
         public static void main(String[] args) {
-            ArrayList<Integer> numberList = new ArrayList<>();
+            ArrayList<Integer> numbers = new ArrayList<>();
             Scanner scanner = new Scanner(System.in);
-            while (true){
-                Integer skaitlis = Integer.valueOf(scanner.nextLine());
-                if (skaitlis==-1) {
-                    break;
-                }
-                numberList.add(skaitlis);
-            }
-            while (true) {
-                System.out.println("From where? ");
-                int start = Integer.valueOf(scanner.nextLine());
-                System.out.println();
-                if (start>numberList.size()){
-                    break;
-                }
-                System.out.println("To where?");
-                int end = Integer.valueOf(scanner.nextLine());
-                System.out.println();
-                if (end>numberList.size()){
-                    break;
-                }
-                for (int x=start; x <= end; x++){
-                    System.out.println(numberList.get(x));
-                }
-                break;
+            numbers.add(3);
+            numbers.add(2);
+            numbers.add(6);
+            numbers.add(-1);
+            numbers.add(5);
+            numbers.add(1);
+            System.out.println("The numbers in the range [0, 5]");
+            printNumbersInRange(numbers, 0, 5);
+            
+            System.out.println("The numbers in the range [3, 10]");
+            printNumbersInRange(numbers, 3, 10);
             //nameList.size()
             //nameList.add()
             //nameList.get()
             //nameList.remove()
+            //list.contains() boolean found = list.contains()
+            // if (list.contains("second")) {
+                //System.out.println("Second can be found");}
             }
-        }
-    }
+            public static void printNumbersInRange
+            (ArrayList<Integer> numbers, int lowerLimit, int upperLimit) {
+                for (int number: numbers) {
+                    if (number >= lowerLimit && number<=upperLimit){
+                        System.out.println(number);
+                    }
+                }
+            }
+            }
