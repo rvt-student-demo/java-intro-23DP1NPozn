@@ -3,22 +3,36 @@ import java.util.*;
 public class App 
 {
         public static void main(String[] args) {
-            ArrayList<Integer> nameList = new ArrayList<>();
+            ArrayList<Integer> numberList = new ArrayList<>();
             Scanner scanner = new Scanner(System.in);
-            int sum=0;
             while (true){
-                int skaitlis = Integer.valueOf(scanner.nextLine());
-                if (skaitlis==0) {
+                Integer skaitlis = Integer.valueOf(scanner.nextLine());
+                if (skaitlis==-1) {
                     break;
                 }
-                nameList.add(skaitlis);
+                numberList.add(skaitlis);
             }
-            for (int x=0; x < nameList.size(); x++){
-                sum+=nameList.get(x);}
-            System.out.println(sum);
+            while (true) {
+                System.out.println("From where? ");
+                int start = Integer.valueOf(scanner.nextLine());
+                System.out.println();
+                if (start>numberList.size()){
+                    break;
+                }
+                System.out.println("To where?");
+                int end = Integer.valueOf(scanner.nextLine());
+                System.out.println();
+                if (end>numberList.size()){
+                    break;
+                }
+                for (int x=start; x <= end; x++){
+                    System.out.println(numberList.get(x));
+                }
+                break;
             //nameList.size()
             //nameList.add()
             //nameList.get()
             //nameList.remove()
+            }
         }
     }
