@@ -30,5 +30,5 @@ class Person {
     String getName(){
         return this.name;
     }
-    //setter
+    
     }

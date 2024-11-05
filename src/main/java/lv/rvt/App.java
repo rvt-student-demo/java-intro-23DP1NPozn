@@ -44,7 +44,17 @@ public class App
                 System.out.print("underage: ");
                 pekka.printPerson();
             }
+            animal animal1 = new animal("cat");
+            System.out.println(animal1);
+            String animalAsString = animal1.toString();
+            
+            Agent bond = new Agent("James", "Bond");
+            Agent ionic = new Agent("Ionic", "Bond");
 
+            bond.toString(); // prints nothing
+            System.out.println(bond);
+            
+            System.out.println(ionic);
         }
             //nameList.size()
             //nameList.add()
