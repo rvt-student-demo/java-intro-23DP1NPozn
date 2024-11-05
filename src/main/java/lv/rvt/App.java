@@ -6,12 +6,13 @@ public class App
             Student matt = new Student();
             matt.play();
             Person ada = new Person("Ada");
-            Person antti = new Person("Antti");
-            Person martin = new Person("Martin");
     
             ada.printPerson();
-            antti.printPerson();
-            martin.printPerson();
+            ada.growOlder();
+            Product Banana = new Product("Banana", 1.1, 13);
+            Banana.printProduct();
+            ada.growOlder();
+            ada.printPerson();
 
         }
             //nameList.size()

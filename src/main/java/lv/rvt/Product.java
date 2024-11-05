@@ -1,16 +1,16 @@
 package lv.rvt;
 
 public class Product {
-    private String initialName;
-    private double initialPrice;
-    private int initialQunatity;
+    private String name;
+    private double price;
+    private int quantity;
     public Product
     (String initialName, double initialPrice, int initialQuantity){
-        this.initialName = "Banana";
-        this.initialPrice = 1.1;
-        this.initialQuantity= 13;
+        this.name = initialName;
+        this.price = initialPrice;
+        this.quantity = initialQuantity;
     }
     public void printProduct(){
-        System.out.println();
+        System.out.println(this.name +", " + this.price +", " + this.quantity+" pcs");
     }
 }

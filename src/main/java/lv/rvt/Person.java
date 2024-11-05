@@ -1,14 +1,19 @@
 package lv.rvt;
 
-public class Person {
+class Person {
     private String name;
     private int age;
 
-    public Person(String initialName) {
+    Person(String initialName) {
         this.age = 0;
         this.name = initialName;
     }
-    public void printPerson() {
+    void printPerson() {
         System.out.println(this.name + ", age " + this.age + " years");
+    }
+    void growOlder() {
+        while (this.age < 30) {
+            this.age++;
+        }
     }
 }
