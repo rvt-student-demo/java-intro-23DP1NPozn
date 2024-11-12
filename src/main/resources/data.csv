@@ -1,3 +1,3 @@
 id, name, password
 1, root, 123
-str.split(", ")
+2, seed, 893

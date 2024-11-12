@@ -1,11 +1,16 @@
 package lv.rvt;
 import java.util.*;
 
-import lv.PaymentCard;
+import java.io.BufferedReader;
 public class App 
 {
-        public static void main(String[] args) {
-            Scanner reader = new Scanner(System.in);
+        public static void main(String[] args) throws Exception {
+            BufferedReader reader = Utils.getReader("data.cvs");
+            String line;
+            while ((line = reader.readLine()) != null) {
+                System.out.println(reader.readLine());
+            }
+
             // Student matt = new Student();
             // matt.play();
             // Person ada = new Person("Ada");
@@ -78,30 +83,6 @@ public class App
             // statistics.addNumber(1);
             // statistics.addNumber(2);
             // System.out.println("Count: " + statistics.getCount());
-            PaymentCard paul = new PaymentCard("Paul", 20);
-            PaymentCard matt = new PaymentCard("Matt", 30);
 
-            matt.eatAffordably();
-
-            paul.eatHeartily();
-            System.out.println(paul);
-            System.out.println(matt);
-
-            paul.addMoney(20);
-            matt.eatHeartily();
-            System.out.println(matt);
-            System.out.println(paul);
-            paul.eatAffordably();
-            paul.eatAffordably();
-            matt.addMoney(50);
-            System.out.println(matt);
-            System.out.println(paul);
         }
     }
-            //nameList.size()
-            //nameList.add()
-            //nameList.get()
-            //nameList.remove()
-            //list.contains() boolean found = list.contains()
-            // if (list.contains("second")) {
-                //System.out.println("Second can be found");}
