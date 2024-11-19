@@ -16,6 +16,9 @@ public class Person2 {
         public void setHeight(int newHeight) {
             this.height = newHeight;
         }
+        public void setAge(int newAge) {
+            this.age = newAge;
+        }
     
         public void setWeight(int newWeight) {
             this.weight = newWeight;
