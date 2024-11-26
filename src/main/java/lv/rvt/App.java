@@ -5,18 +5,39 @@ import java.io.BufferedReader;
 public class App 
 {
         public static void main(String[] args) throws Exception {
-    Timer timer = new Timer();
+            BufferedReader reader = Helper.getReader("persons.csv");
 
-    while (true) {
-    System.out.println(timer);
-    timer.advance();
+            String row1 = reader.readLine();
+            System.out.println(row1);
 
-    try {
-        Thread.sleep(10);
-    } catch (Exception e) {
+            // ArrayList<Person> persons = new ArrayList<>();
+            // for (Person : persons){
+            //     System.out.println(person);
+            // }
+            // String line;
+            // String[] parts = {"name", "age", "weight", "height"};
+            // Person pers1 = new Person(parts[0], parts[1], parts[2], parts[3]);
+            // Person.add(pers1);
+            
+            // reader.readLine();
+            // while ((line = reader.readLine()) != null) {
 
-    }
-}
+            // }
+            // reader.close();
+
+
+//     Timer timer = new Timer();
+
+//     while (true) {
+//     System.out.println(timer);
+//     timer.advance();
+
+//     try {
+//         Thread.sleep(10);
+//     } catch (Exception e) {
+
+//     }
+// }
 //         ClockHand hours = new ClockHand(24);
 //         ClockHand minutes = new ClockHand(60);
 //         ClockHand seconds = new ClockHand(60);
