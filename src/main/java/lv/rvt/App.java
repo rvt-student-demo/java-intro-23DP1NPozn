@@ -6,9 +6,11 @@ public class App
 {
         public static void main(String[] args) throws Exception {
             BufferedReader reader = Helper.getReader("persons.csv");
-
-            String row1 = reader.readLine();
-            System.out.println(row1);
+            String line;
+            reader.readLine(); //title row
+            while ((line = reader.readLine()) !=null){
+                System.out.println(line);
+            }
 
             // ArrayList<Person> persons = new ArrayList<>();
             // for (Person : persons){
