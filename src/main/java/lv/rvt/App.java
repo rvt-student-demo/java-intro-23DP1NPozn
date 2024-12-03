@@ -1,16 +1,76 @@
 package lv.rvt;
 import java.util.*;
-
 import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.nio.file.StandardOpenOption;
 public class App 
 {
         public static void main(String[] args) throws Exception {
-            BufferedReader reader = Helper.getReader("persons.csv");
-            String line;
-            reader.readLine(); //title row
-            while ((line = reader.readLine()) !=null){
-                System.out.println(line);
+            Scanner scanner = new Scanner(System.in);
+            System.out.println("Hello, choose your command");
+            System.out.println("show - shows all persons");
+            System.out.println("add - add a person");
+            System.out.println("exit");
+            while (true){
+            String command = scanner.nextLine();
+
+            if (command.equals("show")) {
+                ArrayList<Person> persons = PersonManager.getPersonList();
+                for (Person person: persons) {
+                    System.out.println(person);
+                }
             }
+            else if (command.equals("add")){
+
+                System.out.println("Please enter name: ");
+                String name = scanner.nextLine();
+                System.out.println("Please enter age: ");
+                int age = Integer.valueOf(scanner.nextLine());
+                System.out.println("Please enter weight: ");
+                int weight = Integer.valueOf(scanner.nextLine());
+                System.out.println("Please enter height: ");
+                int height = Integer.valueOf(scanner.nextLine());
+                Person person = new Person(name, age, weight, height);
+                PersonManager.addPerson(person);
+            }
+        }
+
+            BufferedWriter writer = Helper.getWriter("persons.csv", StandardOpenOption.APPEND);
+
+
+
+            Person person = new Person("Maija", 20, 50, 160);
+            System.out.println("Please enter name: ");
+            String name = scanner.nextLine();
+            System.out.println("Please enter age: ");
+            int age = Integer.valueOf(scanner.nextLine());
+            System.out.println("Please enter weight: ");
+            int weight = Integer.valueOf(scanner.nextLine());
+
+            writer.write("Maija, 20, 0, 160");
+            writer.write(person.toCsvRow());
+            writer.newLine();
+            writer.close();
+
+            else if (command=="exit") {
+                break;
+            }
+
+
+
+
+
+
+            // System.out.println("Sveiki");
+            // String userCommand = scanner.nextLine();
+
+            // BufferedReader reader = Helper.getReader("persons.csv");
+            // String row;
+            // reader.readLine(); //title row
+            // String line;
+            
+            // BufferedWriter writer = Helper.getWriter("persons.csv", StandardOpenOption.APPEND);
+            // writer.write(0);
 
             // ArrayList<Person> persons = new ArrayList<>();
             // for (Person : persons){

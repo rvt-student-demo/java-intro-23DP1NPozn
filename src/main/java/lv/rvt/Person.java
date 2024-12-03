@@ -13,6 +13,9 @@ class Person {
         this.height = initialHeight;
         
     }
+    Person(String initialName){
+        this.name = initialName;
+    }
     void printPerson() {
         System.out.println(this.name + ", age " + this.age + " years");
     }
@@ -33,6 +36,10 @@ class Person {
     }
     String getName(){
         return this.name;
+    }
+    public String toCsvRow(){
+        //Jack, 25, 50, 167
+        return this.name + ", " + this.age + ", " + this.weight + ", " + this.height;
     }
     
     }
