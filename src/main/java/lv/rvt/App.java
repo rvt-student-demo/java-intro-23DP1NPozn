@@ -5,33 +5,28 @@ import java.io.BufferedWriter;
 import java.nio.file.StandardOpenOption;
 public class App 
 {
-        public static void main(String[] args) throws Exception {
-            Scanner scanner = new Scanner(System.in);
+    public static void main(String[] args) {
+        // example main program for the first section of the exercise
+    
+        HealthStation childrensHospital = new HealthStation();
+    
+        Person ethan = new Person("Ethan", 1, 110, 7);
+        Person peter = new Person("Peter", 33, 176, 85);
+    
+        System.out.println(ethan.getName() + " weight: " + childrensHospital.weigh(ethan) + " kilos");
+        System.out.println(peter.getName() + " weight: " + childrensHospital.weigh(peter) + " kilos");
+        childrensHospital.feed(ethan);
+        childrensHospital.feed(ethan);
+        childrensHospital.feed(ethan);
+    
+        System.out.println("");
+    
+        System.out.println(ethan.getName() + " weight: " + childrensHospital.weigh(ethan) + " kilos");
+        System.out.println(peter.getName() + " weight: " + childrensHospital.weigh(peter) + " kilos");
+    }
+}
 
-            boolean isProgramming = true;
-            System.out.println("Welcome to person manager, type \"help\" to see available commands.");
-            while (isProgramming) {
-                String command = scanner.nextLine();
-
-                if (command.equals("exit")) {
-                    System.out.println("Thanks, bye bye!");
-                    isProgramming = false;
-                }   else if (command.equals("show")) {
-                    ArrayList<Person> persons = PersonManager.getPersonList();
-                    for (Person person: persons){
-                        System.out.printf("| %s | %d | %d |", person.getName(), person.getAge(), person.getWeight(), person.getHeight(), person.getBodyMassIndex());
-                    }
-                }   else if (command.equals("add")) {
-                    
-                }   else if (command.equals("help")) {
-                    System.out.println("Type \"add\" to add another person to the csv file");
-                    System.out.println("Type \"show\" to show all persons");
-                    System.out.println("Type \"exit\" to exit the program");
-                }
-
-                    
-                System.out.println("Your command was "+command);
-            }
+            
         //     System.out.println("Hello, choose your command");
         //     System.out.println("show - shows all persons");
         //     System.out.println("add - add a person");
@@ -224,6 +219,3 @@ public class App
             // statistics.addNumber(1);
             // statistics.addNumber(2);
             // System.out.println("Count: " + statistics.getCount());
-
-        }
-    }

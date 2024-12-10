@@ -51,5 +51,4 @@ class Person {
         //Jack, 25, 50, 167
         return this.name + ", " + this.age + ", " + this.weight + ", " + this.height;
     }
-    
     }
