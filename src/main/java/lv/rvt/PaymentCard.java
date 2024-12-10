@@ -1,15 +1,9 @@
 package lv.rvt;
     public class PaymentCard {
         private double balance;
-        private String name;
 
-        public PaymentCard(String name, double openingBalance) {
+        public PaymentCard(double openingBalance) {
             this.balance = openingBalance;
-            this.name = name;
-        }
-    
-        public String toString() {
-            return name+": The card has a balance of "+this.balance+" euros";
         }
         public void eatAffordably() {
             if (this.balance>2.60){
@@ -27,4 +21,10 @@ package lv.rvt;
             this.balance+=amount;
             }
         }
+        public boolean takeMoney(double amount) {
+            // implement the method so that it only takes money from the card if
+            // the balance is at least the amount parameter.
+            // returns true if successful and false otherwise
+        }
+
     }
