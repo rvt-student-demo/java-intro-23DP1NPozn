@@ -7,54 +7,79 @@ public class App
 {
         public static void main(String[] args) throws Exception {
             Scanner scanner = new Scanner(System.in);
-            System.out.println("Hello, choose your command");
-            System.out.println("show - shows all persons");
-            System.out.println("add - add a person");
-            System.out.println("exit");
-            while (true){
-            String command = scanner.nextLine();
 
-            if (command.equals("show")) {
-                ArrayList<Person> persons = PersonManager.getPersonList();
-                for (Person person: persons) {
-                    System.out.println(person);
+            boolean isProgramming = true;
+            System.out.println("Welcome to person manager, type \"help\" to see available commands.");
+            while (isProgramming) {
+                String command = scanner.nextLine();
+
+                if (command.equals("exit")) {
+                    System.out.println("Thanks, bye bye!");
+                    isProgramming = false;
+                }   else if (command.equals("show")) {
+                    ArrayList<Person> persons = PersonManager.getPersonList();
+                    for (Person person: persons){
+                        System.out.printf("| %s | %d | %d |", person.getName(), person.getAge(), person.getWeight(), person.getHeight(), person.getBodyMassIndex());
+                    }
+                }   else if (command.equals("add")) {
+                    
+                }   else if (command.equals("help")) {
+                    System.out.println("Type \"add\" to add another person to the csv file");
+                    System.out.println("Type \"show\" to show all persons");
+                    System.out.println("Type \"exit\" to exit the program");
                 }
+
+                    
+                System.out.println("Your command was "+command);
             }
-            else if (command.equals("add")){
+        //     System.out.println("Hello, choose your command");
+        //     System.out.println("show - shows all persons");
+        //     System.out.println("add - add a person");
+        //     System.out.println("exit");
+        //     while (true){
+        //     String command = scanner.nextLine();
 
-                System.out.println("Please enter name: ");
-                String name = scanner.nextLine();
-                System.out.println("Please enter age: ");
-                int age = Integer.valueOf(scanner.nextLine());
-                System.out.println("Please enter weight: ");
-                int weight = Integer.valueOf(scanner.nextLine());
-                System.out.println("Please enter height: ");
-                int height = Integer.valueOf(scanner.nextLine());
-                Person person = new Person(name, age, weight, height);
-                PersonManager.addPerson(person);
-            }
-        }
+        //     if (command.equals("show")) {
+        //         ArrayList<Person> persons = PersonManager.getPersonList();
+        //         for (Person person: persons) {
+        //             System.out.println(person);
+        //         }
+        //     }
+        //     else if (command.equals("add")){
 
-            BufferedWriter writer = Helper.getWriter("persons.csv", StandardOpenOption.APPEND);
+        //         System.out.println("Please enter name: ");
+        //         String name = scanner.nextLine();
+        //         System.out.println("Please enter age: ");
+        //         int age = Integer.valueOf(scanner.nextLine());
+        //         System.out.println("Please enter weight: ");
+        //         int weight = Integer.valueOf(scanner.nextLine());
+        //         System.out.println("Please enter height: ");
+        //         int height = Integer.valueOf(scanner.nextLine());
+        //         Person person = new Person(name, age, weight, height);
+        //         PersonManager.addPerson(person);
+        //     }
+        // }
+
+        //     BufferedWriter writer = Helper.getWriter("persons.csv", StandardOpenOption.APPEND);
 
 
 
-            Person person = new Person("Maija", 20, 50, 160);
-            System.out.println("Please enter name: ");
-            String name = scanner.nextLine();
-            System.out.println("Please enter age: ");
-            int age = Integer.valueOf(scanner.nextLine());
-            System.out.println("Please enter weight: ");
-            int weight = Integer.valueOf(scanner.nextLine());
+        //     Person person = new Person("Maija", 20, 50, 160);
+        //     System.out.println("Please enter name: ");
+        //     String name = scanner.nextLine();
+        //     System.out.println("Please enter age: ");
+        //     int age = Integer.valueOf(scanner.nextLine());
+        //     System.out.println("Please enter weight: ");
+        //     int weight = Integer.valueOf(scanner.nextLine());
 
-            writer.write("Maija, 20, 0, 160");
-            writer.write(person.toCsvRow());
-            writer.newLine();
-            writer.close();
+        //     writer.write("Maija, 20, 0, 160");
+        //     writer.write(person.toCsvRow());
+        //     writer.newLine();
+        //     writer.close();
 
-            else if (command=="exit") {
-                break;
-            }
+        //     else if (command=="exit") {
+        //         break;
+        //     }
 
 
 

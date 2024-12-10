@@ -28,14 +28,24 @@ class Person {
     public int returnAge() {
         return this.age;
     }
+    public int getWeight() {
+        return this.weight;
+    }
     public boolean isOfLegalAge() {
         return this.age >= 18;
     }
-    int getAge(){
+    public int getAge(){
         return this.age;
     }
-    String getName(){
+    public int getHeight(){
+        return this.height;
+    }
+    public String getName(){
         return this.name;
+    }
+    public double getBodyMassIndex() {
+        double heigthPerHundred = this.height / 100.0;
+        return this.weight / (heigthPerHundred * heigthPerHundred);
     }
     public String toCsvRow(){
         //Jack, 25, 50, 167
