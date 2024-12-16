@@ -60,6 +60,12 @@ public class PaymentTerminal {
         // if the payment card has enough money, the balance of the card is decreased by the price, and the method returns true
         // otherwise false is returned
     }
+    public void addMoneyToCard(PaymentCard card, double sum) {
+        if (sum > 0) {                   // Ensure the amount to be added is positive
+            card.addMoney(sum);          // Add the sum to the card's balance
+            this.money += sum;           // Increase the terminal's cash balance by the same sum
+        }
+    }
 
     public String toString() {
         return "money: " + money + ", number of sold affordable meals: " + affordableMeals + ", number of sold hearty meals: " + heartyMeals;
