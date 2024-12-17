@@ -8,24 +8,13 @@ public class App
     public class MainProgram {
         public static void main(String[] args) {
 
-            HealthStation childrensHospital = new HealthStation();
-        
-            Person ethan = new Person("Ethan", 1, 110, 7);
-            Person peter = new Person("Peter", 33, 176, 85);
-        
-            System.out.println("weighings performed: " + childrensHospital.weighings());
-        
-            childrensHospital.weigh(ethan);
-            childrensHospital.weigh(peter);
-        
-            System.out.println("weighings performed: " + childrensHospital.weighings());
-        
-            childrensHospital.weigh(ethan);
-            childrensHospital.weigh(ethan);
-            childrensHospital.weigh(ethan);
-            childrensHospital.weigh(ethan);
-        
-            System.out.println("weighings performed: " + childrensHospital.weighings());
+            Apartment manhattanStudioApt = new Apartment(1, 16, 5500);
+            Apartment atlantaTwoBedroomApt = new Apartment(2, 38, 4200);
+            Apartment bangorThreeBedroomApt = new Apartment(3, 78, 2500);
+            
+            System.out.println(manhattanStudioApt.moreExpensiveThan(atlantaTwoBedroomApt));  // false
+            System.out.println(bangorThreeBedroomApt.moreExpensiveThan(atlantaTwoBedroomApt));   // true
+
         }
 }
 }

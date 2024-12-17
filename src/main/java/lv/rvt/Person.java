@@ -46,6 +46,9 @@ class Person {
     public String getName(){
         return this.name;
     }
+    public void setName(String newName){
+        this.name = newName;
+    }
     public double getBodyMassIndex() {
         double heigthPerHundred = this.height / 100.0;
         return this.weight / (heigthPerHundred * heigthPerHundred);
