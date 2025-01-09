@@ -8,13 +8,12 @@ public class App
     public class MainProgram {
         public static void main(String[] args) {
 
-            Apartment manhattanStudioApt = new Apartment(1, 16, 5500);
-            Apartment atlantaTwoBedroomApt = new Apartment(2, 38, 4200);
-            Apartment bangorThreeBedroomApt = new Apartment(3, 78, 2500);
-            
-            System.out.println(manhattanStudioApt.moreExpensiveThan(atlantaTwoBedroomApt));  // false
-            System.out.println(bangorThreeBedroomApt.moreExpensiveThan(atlantaTwoBedroomApt));   // true
+            Box box = new  Box( 2.5, 5.0, 6.0 ) ;
 
+            System.out.println( "Area: "  + box.area() + " volume: " + box. volume() );
+       
+            System.out.println( "length: " + box.length() + " height: " + box.height() +
+                                "width:  " + box.width() )  ;
         }
 }
 }
