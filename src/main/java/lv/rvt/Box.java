@@ -60,7 +60,11 @@ public class Box {
   return new Box( 1.25*oldBox.width(),1.25*oldBox.height(),1.25*oldBox.length());
 }
     public boolean nests( Box outsideBox ){
-        if (oldBox.width()<outsideBox.width ||  )
-        return false;
+        if (this.width()<outsideBox.width() && this.height() < outsideBox.height() && this.length() < outsideBox.length() ){
+        return true;
+        }
+        else {
+            return false;
+        }
     }
 }
