@@ -1,10 +1,14 @@
 package lv.rvt;
 
+import java.util.ArrayList;
+
 class Person {
     private String name;
     private int age;
     private int height;
     private int weight;
+    private String address;
+
 
     Person(String initialName, int initialAge, int initialHeight, int initialWeight) {
         this.age = initialAge;
@@ -13,6 +17,19 @@ class Person {
         this.height = initialHeight;
         
     }
+    public Person(String name, int age, int weight, int height, String address){
+        this.name=name;
+        this.age = age;
+        this.weight = weight;
+        this.height = height;
+        this.address = address;
+    }
+    public Person(String name, String address){
+        this(name, 0, 0, 0, address);
+    }
+
+
+
     Person(String initialName){
         this.name = initialName;
     }
@@ -46,6 +63,9 @@ class Person {
     public String getName(){
         return this.name;
     }
+    public String getAddress(){
+        return this.address;
+    }
     public void setName(String newName){
         this.name = newName;
     }
@@ -56,5 +76,13 @@ class Person {
     public String toCsvRow(){
         //Jack, 25, 50, 167
         return this.name + ", " + this.age + ", " + this.weight + ", " + this.height;
+    }
+    public String toString(){
+        return this.name + "\n\t" + this.address;
+    }
+    public static void printPersons(ArrayList<Person> persons) {
+        for (Person person : persons) {
+            System.out.println(person);
+        }
     }
     }
