@@ -10,6 +10,7 @@ class Person {
     private String address;
 
 
+
     Person(String initialName, int initialAge, int initialHeight, int initialWeight) {
         this.age = initialAge;
         this.name = initialName;
@@ -27,9 +28,6 @@ class Person {
     public Person(String name, String address){
         this(name, 0, 0, 0, address);
     }
-
-
-
     Person(String initialName){
         this.name = initialName;
     }
@@ -80,9 +78,9 @@ class Person {
     public String toString(){
         return this.name + "\n\t" + this.address;
     }
-    public static void printPersons(ArrayList<Person> persons) {
-        for (Person person : persons) {
-            System.out.println(person);
-        }
-    }
+    // public static void printPersons(ArrayList<Person> persons) {
+    //     for (Person person : persons) {
+    //         System.out.println(person);
+    //     }
+    // }
     }

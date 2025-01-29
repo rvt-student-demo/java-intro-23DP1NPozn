@@ -13,6 +13,7 @@ public class Student extends Person {
     public int credits() {
         return credits;
     }
+    @Override
     public String toString(){
         return this.getName() + "\n\t" + this.getAddress() + "\n\t" + "Study credits " + this.credits();
     }
