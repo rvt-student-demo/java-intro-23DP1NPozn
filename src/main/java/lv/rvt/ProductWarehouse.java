@@ -2,6 +2,7 @@ package lv.rvt;
 
 public class ProductWarehouse extends Warehouse {
     private String name;
+    
 
     public ProductWarehouse(String name, double capacity) {
         super(capacity);
@@ -17,7 +18,7 @@ public class ProductWarehouse extends Warehouse {
     }
 
     public String toString() {
-        return this.name + ": " + this.getBalance() + ", " + "space left: " + this.howMuchSpaceLeft();
+        return this.name + ": " + super.toString();
     }
 
     
