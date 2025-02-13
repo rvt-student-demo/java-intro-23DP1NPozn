@@ -5,25 +5,25 @@ public class ProductWarehouseWithHistory extends ProductWarehouse {
 
     public ProductWarehouseWithHistory(String productName, double capacity, double initialBalance) {
         super(productName, capacity);
+        super.addToWarehouse(initialBalance);
         this.history = new ChangeHistory();
-        this.addToWarehouse(initialBalance); // Sets the initial balance and updates history
+    }
+
+    public String history() {
+        return this.history.toString();
     }
 
     @Override
     public void addToWarehouse(double amount) {
         super.addToWarehouse(amount);
-        this.history.add(this.getBalance());
+        this.history.add(super.getBalance());
     }
-
+ 
     @Override
     public double takeFromWarehouse(double amount) {
-        double taken = super.takeFromWarehouse(amount);
-        this.history.add(this.getBalance());
-        return taken;
-    }
-
-    public String history() {
-        return this.history.toString();
+        double received = super.takeFromWarehouse(amount);
+        history.add(super.getBalance());
+        return received;
     }
 
     public void printAnalysis() {
