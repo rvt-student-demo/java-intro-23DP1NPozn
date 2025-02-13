@@ -1,24 +1,27 @@
 package lv.rvt;
 import java.util.*;
 
-public class Box {
+public class PackableBox implements Packable {
     private double capacity;
     private ArrayList<Packable> items;
     private double weight;
+    private double totalWeight;
 
-    public Box(double capacity){
+    public PackableBox(double capacity){
         this.capacity = capacity;
+        this.items = new ArrayList<>();
+        this.totalWeight = 0.0;
     }
 
     public double weight() {
         for (Packable item: items){
-            this.weight +=item.weight();
+            this.totalWeight +=item.weight();
         }
-        return weight;
+        return totalWeight;
     }
 
-    public void add(Packable item){
-        if (this.weight() + item.weight() <= this.capacity) {
+    public void add(Packable item) {
+        if (this.totalWeight + item.weight() <= this.capacity) {
             items.add(item);
         }
     }
